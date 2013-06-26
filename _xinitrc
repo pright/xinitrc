@@ -16,22 +16,17 @@ fi
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # ime
-# ibus settings
+# ibus
+#export GTK_IM_MODULE=ibus
+#export QT_IM_MODULE=ibus
 #export XMODIFIERS=@im=ibus
-#export XIM=ibus
-#export XIM_PROGRAM=ibus
-
-# fctix settings
-export XMODIFIERS=@im=fcitx
-export XIM=fcitx
-export XIM_PROGRAM=fcitx
-
-export GTK_IM_MODULE=XIM
-export QT_IM_MODULE=XIM
-
-# launch ime
 #ibus-daemon -x -d
-fcitx
+
+# fctix
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+fcitx &
 
 # goagent
 #python2 /home/pright/utils/goagent/local/proxy.py &> /dev/null &
