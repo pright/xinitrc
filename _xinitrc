@@ -1,9 +1,5 @@
 #! /bin/sh
 
-# locale
-export LANG=zh_CN.UTF-8
-export LC_ALL="zh_CN.UTF-8"
-
 # xinitrc.d
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
     for f in /etc/X11/xinit/xinitrc.d/*; do
@@ -15,39 +11,9 @@ fi
 # Xresources
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-# ime
-# ibus
-#export GTK_IM_MODULE=ibus
-#export QT_IM_MODULE=ibus
-#export XMODIFIERS=@im=ibus
-#ibus-daemon -x -d
-
-# fctix
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-fcitx &
-
-# goagent
-#python2 /home/pright/utils/goagent/local/proxy.py &> /dev/null &
-
-# volume icon
-volumeicon &
-
-# dropbox
-dropboxd &
-
-# yunio
-yunio &
-
-# rainlendar
-rainlendar &
-
-# clipit
-clipit &
-
-# batterymon 
-#batterymon &
+# xprofile
+[[ -f /etc/xprofile ]] && source /etc/xprofile
+[[ -f ~/.xprofile ]] && source ~/.xprofile
 
 # awesome
 exec awesome

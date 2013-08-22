@@ -3,7 +3,7 @@ xterm.termName: xterm-256color
 xterm.geometry: 80x36
 xterm*scrollBar: false
 xterm*rightScrollBar: true
-xterm*loginshell: true
+xterm*loginShell: true
 xterm*cursorBlink: true
 xterm*background:  black
 xterm*foreground:  gray
