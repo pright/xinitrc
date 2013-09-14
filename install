@@ -5,6 +5,6 @@ cwd=$(pwd)
 
 ln -sf $cwd/_xinitrc $home/.xinitrc
 ln -sf $cwd/_xprofile $home/.xprofile
-ln -sf $cwd/_Xresources $home/.Xresources
+
 
 exit 0
